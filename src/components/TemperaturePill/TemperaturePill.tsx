@@ -6,7 +6,7 @@ interface Props {
   temperature?: string | number;
 }
 
-const TemperaturePill: React.FC<Props> = ({ temperature = '--' }) => {
+const TemperaturePill = ({ temperature = '--' }: Props) => {
   const [color, backgroundColor] = useMemo(() => {
     const t =
       typeof temperature === 'string' ? Number(temperature) : temperature;
