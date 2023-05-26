@@ -6,15 +6,20 @@ import { ScrollView, Text } from 'react-native';
 import MainWeatherInfo from './MainWeatherInfo';
 import Loader from 'components/Loader/Loader';
 import { TItemSchema } from 'api/index';
+import { UseQueryResult } from '@tanstack/react-query';
+import ErrorView from 'components/ErrorView/ErrorView';
 
-interface Props {
-  loading: boolean;
-  data?: TItemSchema;
-}
-
-const CityDetails = ({ loading, data }: Props) => {
-  if (loading) {
+const CityDetails = ({
+  data,
+  isFetching,
+  isError,
+}: Pick<UseQueryResult<TItemSchema>, 'isFetching' | 'data' | 'isError'>) => {
+  if (isFetching) {
     return <Loader />;
+  }
+
+  if (isError || !data) {
+    return <ErrorView />;
   }
 
   return (

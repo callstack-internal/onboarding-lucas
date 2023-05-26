@@ -9,10 +9,10 @@ const CityDetailsScreen = () => {
   const { params } =
     useRoute<NativeStackScreenProps<RootStackParamList, 'Details'>['route']>();
   const id = params.id;
-  const { data, isFetching } = useCityWeatherById({ id });
+  const { data, isFetching, isError } = useCityWeatherById({ id });
 
   useSetNavigationOptions({ title: data?.name || 'Details' });
-  return <CityDetails loading={isFetching} data={data} />;
+  return <CityDetails isFetching={isFetching} data={data} isError={isError} />;
 };
 
 export default CityDetailsScreen;
