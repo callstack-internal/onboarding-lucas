@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import { StyleSheet } from 'react-native';
 import FastImage from 'react-native-fast-image';
 
@@ -21,4 +20,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default memo(WeatherIcon);
+export default WeatherIcon;

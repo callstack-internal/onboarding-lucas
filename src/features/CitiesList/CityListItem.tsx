@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Row from 'components/Row/Row';
 import WeatherIcon from 'components/WeatherIcon/WeatherIcon';
@@ -54,4 +53,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default memo(CityListItem);
+export default CityListItem;

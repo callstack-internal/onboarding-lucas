@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { TItemSchema } from 'api/index';
 import Row from 'components/Row/Row';
-import { memo } from 'react';
 
 interface Props {
   data?: TItemSchema['main'];
@@ -44,4 +43,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default memo(MainWeatherInfo);
+export default MainWeatherInfo;

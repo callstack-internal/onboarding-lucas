@@ -1,6 +1,6 @@
 import { StyleSheet, Text } from 'react-native';
 import Row from 'components/Row/Row';
-import { memo, useMemo } from 'react';
+import { useMemo } from 'react';
 
 interface Props {
   temperature?: string | number;
@@ -46,4 +46,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default memo(TemperaturePill);
+export default TemperaturePill;

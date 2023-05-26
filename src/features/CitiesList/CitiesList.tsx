@@ -16,18 +16,15 @@ const CitiesList: React.FC<Props> = ({ data, loading, error }) => {
   const handleNavigateToDetails = (id: number) =>
     navigation.navigate('Details', { id });
 
-  const renderItem = useCallback<ListRenderItem<TItemSchema>>(
-    ({ item }) => (
-      <CityListItem
-        cityName={item.name}
-        conditions={item.weather[0].description}
-        temp={item.main.temp}
-        icon={item.weather[0].icon}
-        id={item.id}
-        onPress={handleNavigateToDetails}
-      />
-    ),
-    [],
+  const renderItem: ListRenderItem<TItemSchema> = ({ item }) => (
+    <CityListItem
+      cityName={item.name}
+      conditions={item.weather[0].description}
+      temp={item.main.temp}
+      icon={item.weather[0].icon}
+      id={item.id}
+      onPress={handleNavigateToDetails}
+    />
   );
 
   return (
