@@ -1,7 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import { FlashList, ListRenderItem } from '@shopify/flash-list';
 import { TItemSchema } from 'api/index';
-import { useCallback } from 'react';
 import { StyleSheet, View } from 'react-native';
 import CityListItem from './CityListItem';
 
