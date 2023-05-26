@@ -15,7 +15,7 @@ const PROPS_TO_NAMES_MAP = [
   { prop: 'humidity', name: 'Humidity', suffix: '%' },
 ] as const;
 
-const MainWeatherInfo: React.FC<Props> = ({ data }) => {
+const MainWeatherInfo = ({ data }: Props) => {
   if (!data) return null;
 
   return (

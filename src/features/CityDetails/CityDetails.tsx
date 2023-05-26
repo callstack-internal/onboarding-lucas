@@ -12,7 +12,7 @@ interface Props {
   data?: TItemSchema;
 }
 
-const CityDetails: React.FC<Props> = ({ loading, data }) => {
+const CityDetails = ({ loading, data }: Props) => {
   if (loading) {
     return <Loader />;
   }

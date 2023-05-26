@@ -10,7 +10,7 @@ interface Props {
   loading: boolean;
   error?: string | null;
 }
-const CitiesList: React.FC<Props> = ({ data, loading, error }) => {
+const CitiesList = ({ data, loading }: Props) => {
   const navigation = useNavigation();
 
   const handleNavigateToDetails = (id: number) =>

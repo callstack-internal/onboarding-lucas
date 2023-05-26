@@ -2,7 +2,7 @@ import { Image, ImageProps, StyleSheet } from 'react-native';
 
 interface Props extends Omit<ImageProps, 'source'> { }
 
-const Chevron: React.FC<Props> = props => {
+const Chevron = (props: Props) => {
   return (
     <Image
       {...props}

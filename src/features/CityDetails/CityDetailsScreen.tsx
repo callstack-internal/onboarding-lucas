@@ -5,7 +5,7 @@ import { useCityWeatherById } from 'queries/index';
 import { RootStackParamList } from 'src/App';
 import CityDetails from './CityDetails';
 
-const CityDetailsScreen: React.FC = () => {
+const CityDetailsScreen = () => {
   const { params } =
     useRoute<NativeStackScreenProps<RootStackParamList, 'Details'>['route']>();
   const id = params.id;

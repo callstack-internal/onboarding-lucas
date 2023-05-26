@@ -13,14 +13,14 @@ interface Props {
   onPress(id: number): void;
 }
 
-const CityListItem: React.FC<Props> = ({
+const CityListItem = ({
   cityName,
   conditions,
   temp,
   icon,
   id,
   onPress,
-}) => {
+}: Props) => {
   const handleOnPress = () => onPress?.(id);
   return (
     <TouchableOpacity onPress={handleOnPress} id="city-item">

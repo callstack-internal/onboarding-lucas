@@ -4,7 +4,7 @@ import FastImage from 'react-native-fast-image';
 interface Props {
   iconId?: string;
 }
-const WeatherIcon: React.FC<Props> = ({ iconId }) => {
+const WeatherIcon = ({ iconId }: Props) => {
   return (
     <FastImage
       source={{ uri: `https://openweathermap.org/img/w/${iconId}.png` }}

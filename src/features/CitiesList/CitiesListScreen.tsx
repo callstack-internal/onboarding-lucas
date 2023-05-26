@@ -1,7 +1,7 @@
 import { useCitiesListWeatherByIds } from 'queries/index';
 import CitiesList from './CitiesList';
 
-const CitiesListScreen: React.FC = () => {
+const CitiesListScreen = () => {
   const { status, data } = useCitiesListWeatherByIds({
     ids: [
       '755889',
