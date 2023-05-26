@@ -59,7 +59,7 @@ export const WeatherDataSchema = z.object({
 
 export type TWeatherDataSchema = z.infer<typeof WeatherDataSchema>;
 
-export const useWeatherByIDs = async ({ ids }: { ids: string[] }) => {
+export const fetchWeatherByIDs = async ({ ids }: { ids: string[] }) => {
   try {
     const idsString = ids.join(',');
     const res = await fetch(
